@@ -1,0 +1,48 @@
+Hello, I'm GANGASAGAR HL, currently pursuing my MTech in Computer Science with an AI/ML specialization at IIIT Bangalore.
+My key interests include:
+
+Solving real-world problems through AI: During my engineering, I worked on a project called KrishiSahayogi, which aimed to assist farmers through AI-powered solutions.
+Enhancing edge devices with intelligence: My fascination with this grew significantly when I learned that K-means clustering is used in pacemakers to detect irregularities and adjust the pacing, helping the heart function normally.
+I'm deeply passionate about exploring AI/ML applications that can make a meaningful impact on society and drive technological advancements.
+
+
+
+
+
+
+
+
+I am a strong fit for this role due to my extensive experience in AI/ML and my passion for solving real-world problems.
+Key skills and experiences include:
+
+ I have worked on creating small transformers, fine-tuning foundational models, and successfully deploying them on AWS, demonstrating my end-to-end expertise in model lifecycle management.
+ 
+ During my engineering, I developed KrishiSahayogi, an AI-powered solution aimed at assisting farmers, showcasing my ability to apply AI to practical challenges.
+ 
+ I'm passionate about making edge devices smarter, inspired by the use of K-means clustering in pacemakers to regulate heart activity, and currently working on embeded devices. 
+With my technical expertise, hands-on experience, and problem-solving mindset, I am confident in my ability to add significant value to this role.
+
+
+
+
+
+
+
+
+
+KrishiSahayogi – AI-Powered Agriculture Solution
+Purpose & Inspiration:
+Inspired by Israel's agricultural technology, the project explored techniques like grafting, where drought-resistant rootstock is paired with high-yielding scions to boost productivity in arid regions.
+Our main aim was to transform agriculture into a highly profitable platform by leveraging AI-powered insights and advanced farming techniques.
+
+Version 1:
+
+Recommended crops based on soil types (pH, moisture, nutrients).
+Predicted yield timelines and suggested nearby APMCs for profitable sales.
+
+Challenges Faced:
+
+Data Collection: Reluctance from APMCs to share data. Finally, the team sourced data from Agmarknet.in.
+Testing: Setting up infrastructure and ensuring accurate predictions required extensive fine-tuning.
+
+
