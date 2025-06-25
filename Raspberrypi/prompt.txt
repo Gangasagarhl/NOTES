@@ -1,0 +1,40 @@
+Below shall be answered in such a way it shall be printed in paper
+
+
+Summarise whe thole code, what is happening here? 
+Explain each and evry step what is going on here, in this code.
+Explain each and every word in this script very clearly and in depth. 
+Like what is the use of the word? 
+If that is a function, what is the syntax of it? explain about thaat function.
+Mention all the library calls that has bee used here, give one line explanation to this.
+
+This is how you need to print the output: 
+
+    Summary of the code: ........
+
+    ***give some space***
+    Steps: 
+       1)
+       2) ....
+    ***give some space***
+
+    Whole restructure code : 
+        whole restructured code .....
+
+    ***give some space***
+
+    Explaination and use of word:
+       library call function 1- ....
+       library call function 2- ....
+
+    ***give some space***
+    
+    Synatax of the library calls used:
+       print("text") - Use fof printing text in sied the print
+       example2 function - 
+
+    ***give some space***
+
+
+
+.... shall be filled by you gpt and follow the the structure of the answer
