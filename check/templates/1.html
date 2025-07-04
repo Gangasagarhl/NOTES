@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Interface</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 30px;
+    }
+    #chatbox {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      height: 400px;
+      overflow-y: auto;
+    }
+    .message {
+      padding: 8px;
+      margin: 6px 0;
+    }
+    .user {
+      text-align: right;
+      color: #007bff;
+    }
+    .bot {
+      text-align: left;
+      color: #28a745;
+    }
+    #form {
+      display: flex;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+    #input {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #submit {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="chatbox"></div>
+
+  <form id="form">
+    <input type="text" id="input" placeholder="Type your message..." required />
+    <button type="submit" id="submit">Send</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    const chatbox = document.getElementById('chatbox');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+
+      appendMessage(userMessage, 'user');
+      input.value = '';
+
+      try {
+        const response = await fetch('/chat', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ message: userMessage })
+        });
+
+        const data = await response.json();
+        appendMessage(data.reply || 'No response', 'bot');
+      } catch (err) {
+        appendMessage('Error: ' + err.message, 'bot');
+      }
+    });
+
+    function appendMessage(text, sender) {
+      const div = document.createElement('div');
+      div.className = 'message ' + sender;
+      div.textContent = text;
+      chatbox.appendChild(div);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+
+</body>
+</html>
