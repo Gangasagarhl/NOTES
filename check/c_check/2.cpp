@@ -1,18 +1,48 @@
+#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
+void  print(vector<vector<int>> &arr)
+{
+    for(auto i: arr){
+        for(auto j: i)
+            cout<< j<<"  ";
+        cout<<"\n"; 
+    }
+}
+
+
+void sub(int ind ,vector<int> &arr, vector<vector<int>> &ans, vector<int> &nums){
+    if(ind==nums.size()){
+        ans.push_back(arr);
+        return;
+
+    }
+    arr.push_back(nums[ind]);
+    sub(ind+1, arr, ans, nums);
+    arr.pop_back(); 
+
+    for(int j= ind+1 ;j<nums.size();j++ ){
+        if(nums[j]!=nums[ind]){
+            sub(j, arr, ans, nums);
+            return;
+        }
+    }
+
+    sub(nums.size(), arr,ans, nums); 
+}
+
+
 
 int main(){
-    int inp = 15, tar= 7, cnt =0, cnt1 = 0 ;
-    int  hi = inp ^ tar; 
-    while( inp -  tar){
-        if( (  (inp&1) ^ (tar&1)  ) ==1) cnt++; 
-        inp >>=1;
-        tar >>=1;
-    }
-    while(hi)
-    {   if(hi&1)cnt1++;
-        hi >>= 1; 
-    }
+    vector<int> arr={1, 2,2};
+    vector<vector<int>> ans; 
+    vector<int> ds; 
+    sub(0 ,ds, ans, arr);
+    
+    print(ans);
 
-    cout<< cnt <<" " <<cnt1<<"\n ";
-}
+
+    
+   
+    return 1;
+};
