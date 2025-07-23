@@ -1,0 +1,50 @@
+#include<iostream> 
+using namespace std; 
+class Node{
+    public: 
+    int data; 
+    Node * r; 
+    Node * l;
+    Node(int val, Node* ri , Node *lf): data(val), r=ri, l=lf {}; 
+
+}
+void serialise(Node*  root, string &s){
+    stack<Node *> st;
+    Node * cur;
+    cur  = root;
+    st.push(root);
+    while(!st.empty()){
+
+       cur = st.top();
+        if(cur->l){
+
+            st.push(cur->l);
+            s+=cur->l->data;
+            continue; 
+            
+        }
+        else
+            s+='#';
+        
+        
+        
+        if(cur->r){
+            str+=cur->r->data; 
+            st.push(cur->r); 
+            continue; 
+
+        }
+        else
+            s+='#';
+
+        st.pop();
+    }
+    
+}
+int main(){
+    string s; 
+    Node *root;
+    serialise(root,string);
+     
+    return 0;
+}
