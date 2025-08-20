@@ -131,3 +131,8 @@ int main() {
     
     return 0;
 }
+
+
+1. security systems 
+2. Heart disease
+3. C program 
